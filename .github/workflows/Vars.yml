@@ -4,6 +4,8 @@ name: 'Customer Env Vars'
 
 
 on:
+  push:
+    branches: [ "main" ]
   workflow_call:
     
  
