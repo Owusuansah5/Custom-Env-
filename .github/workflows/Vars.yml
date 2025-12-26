@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 'Customer Env Vars'
+
+
+on:
+  workflow_call:
+    
+ 
+env:
+    DAY_OF_WEEK: Funday
+    testvar: value-1 
+
+ 
+
+jobs:
+  
+  mainjob:
+    name: 'Print the env vars'
+    runs-on: ubuntu-latest
+
+    env:
+      Greeting: Dear
+      testvar: value-2
+
+   
+    steps:
+      - name: Print-values-of-env-vars
+        run:
+          echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+          echo "testvar $testvar"
+          echo "testvar ${{ env.testvar }}"
+
+        env:
+          First_Name: Student
+          testvar: value-3
+
+     
