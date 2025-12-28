@@ -11,7 +11,8 @@ on:
  
 env:
     DAY_OF_WEEK: Funday
-    testvar: value-1 
+    testvar: value-1
+    TOP_SECRET: i-am-top-secret..please-dont-disclose-me
 
  
 
